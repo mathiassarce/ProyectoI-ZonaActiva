@@ -1,0 +1,29 @@
+# Carpetas de compilación y config de Visual Studio
+.vs/
+Debug/
+Release/
+x64/
+x86/
+Win32/
+
+# Archivos de usuario y proyecto generados
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.db
+*.db-shm
+*.db-wal
+*.opendb
+*.ipch
+*.vsidx
+*.VC.db
+*.VC.opendb
+
+# Archivos de caché de IntelliSense
+ipch/
+*.aps
+*.pdb
+*.obj
+*.exe
+*.log
