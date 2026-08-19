@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Proyecto I ZonaActiva/Proyecto I ZonaActiva.vcxproj" />
+  <Project Path="Proyecto I ZonaActiva/Proyecto I ZonaActiva.vcxproj" Id="d55b467e-35fc-47a3-afd4-2b02786e6e42" />
 </Solution>

@@ -4,11 +4,11 @@ using namespace std;
 
 //Constructor por defecto
 Cancha::Cancha() {
-	codigo = "";
-	tipoDeporte = "";
+	codigo = " ";
+	tipoDeporte = " ";
 	precioPorHora = 0.0;
 	for (int i = 0; i < NUM_FRANJAS; i++) {
-		franjas[i] = 'L'; // L para Libre
+		franjas[i] = 'L'; 
 	}
 }
 
@@ -18,7 +18,7 @@ Cancha::Cancha(string codigo, string tipoDeporte, double precioPorHora) {
 	this->tipoDeporte = tipoDeporte;
 	this->precioPorHora = precioPorHora;
 	for (int i = 0; i < NUM_FRANJAS; i++) {
-		franjas[i] = 'L'; // L para Libre
+		franjas[i] = 'L'; 
 	}
 }
 
