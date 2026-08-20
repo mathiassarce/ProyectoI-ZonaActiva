@@ -1,10 +1,11 @@
 #include "Reserva.h"
+#include <iostream>
 
 int Reserva::getNumeroReserva() {
     return numeroReserva;
 }
 
-//Cliente* getCanchaCliente();//Queda pendienteCancha*
+//Cliente* getCanchaCliente();//Queda pendiente Cliente
 
 Cancha* Reserva::getCanchaAsociada() {
     return canchaAsociada;
@@ -41,6 +42,7 @@ void Reserva::mostrarInformacion() {
 Reserva::Reserva(int numeroReserva, /*Cliente* clienteAsociado ,*/ Cancha* canchaAsociada, int franjaInicial,
         int franjaCantidadReservada, double montoReserva) {
     this->numeroReserva = numeroReserva;
+    //this->clienteAsociado = clienteAsociado //Queda pendiente 
     this->canchaAsociada = canchaAsociada;
     this->franjaInicial = franjaInicial;
     this->franjaCantidadReservada = franjaCantidadReservada;

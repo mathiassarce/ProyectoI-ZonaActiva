@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 #include "Cancha.h"
-#include <iostream>
 using namespace std;
 
 class Reserva{
@@ -33,7 +32,7 @@ public:
 
 	//Constructor
 	Reserva(int numeroReserva,
-		//Cliente* clienteAsociado,//
+		//Cliente* clienteAsociado,
 		Cancha* canchaAsociada,
 		int franjaInicial,
 		int franjaCantidadReservada,
