@@ -1,48 +1,52 @@
 #include "Reserva.h"
-#include "Cancha.h"
-#include <string>
-using namespace std;
 
 int Reserva::getNumeroReserva() {
-	return numeroReserva;
+    return numeroReserva;
 }
-//Cliente* getCanchaCliente();//Queda pendiente
+
+//Cliente* getCanchaCliente();//Queda pendienteCancha*
+
 Cancha* Reserva::getCanchaAsociada() {
-
+    return canchaAsociada;
 }
+
 int Reserva::getFranjaInicial() {
-	return franjaInicial;
+    return franjaInicial;
 }
+
 int Reserva::getFranjaCantidadReservada() {
-	return franjaCantidadReservada;
+    return franjaCantidadReservada;
 }
+
 double Reserva::getMontoReserva() {
-	return montoReserva;
+    return montoReserva;
 }
+
 bool Reserva::getEstadoReserva() {
-	return estadoReserva;
+    return estadoReserva;
 }
 
-//Setters
 void Reserva::setEstadoReservado(bool estadoReserva) {
-	this->estadoReserva = estadoReserva;
+    this->estadoReserva = estadoReserva;
 }
 
-//Mostrar
-void Reserva::mostrarInformacion();
-
-//Constructor
-Reserva(int numeroReserva,
-	//Cliente* clienteAsociado,//
-	Cancha* canchaAsociada,
-	int franjaInicial,
-	int franjaCantidadReservada,
-	double montoReserva){
-	this->numeroReserva = numeroReserva;
-	this->franjaInicial = franjaInicial;
-	this->franjaCantidadReservada = franjaCantidadReservada;
-	this->montoReserva = montoReserva;
+void Reserva::mostrarInformacion() {
+    cout << "Reserva #" << numeroReserva
+        << " | Franja inicio: " << franjaInicial
+        << " | Cantidad: " << franjaCantidadReservada
+        << " | Monto: $" << montoReserva
+        << " | Estado: " << (estadoReserva ? "Activa" : "Cancelada") << endl;
 }
 
-//Destructor
-~Reserva();
+Reserva::Reserva(int numeroReserva, /*Cliente* clienteAsociado ,*/ Cancha* canchaAsociada, int franjaInicial,
+        int franjaCantidadReservada, double montoReserva) {
+    this->numeroReserva = numeroReserva;
+    this->canchaAsociada = canchaAsociada;
+    this->franjaInicial = franjaInicial;
+    this->franjaCantidadReservada = franjaCantidadReservada;
+    this->montoReserva = montoReserva;
+    this->estadoReserva = true;
+}
+
+Reserva::~Reserva() {
+}
