@@ -1,11 +1,12 @@
 #include "Reserva.h"
-#include <iostream>
 
 int Reserva::getNumeroReserva() {
     return numeroReserva;
 }
 
-//Cliente* getCanchaCliente();//Queda pendiente Cliente
+Cliente* Reserva::getClienteAsociado() {
+    return clienteAsociado;
+}
 
 Cancha* Reserva::getCanchaAsociada() {
     return canchaAsociada;
@@ -33,16 +34,16 @@ void Reserva::setEstadoReservado(bool estadoReserva) {
 
 void Reserva::mostrarInformacion() {
     cout << "Reserva #" << numeroReserva
-        << " | Franja inicio: " << franjaInicial
-        << " | Cantidad: " << franjaCantidadReservada
-        << " | Monto: $" << montoReserva
-        << " | Estado: " << (estadoReserva ? "Activa" : "Cancelada") << endl;
+         << " | Franja inicio: " << franjaInicial
+         << " | Cantidad: " << franjaCantidadReservada
+         << " | Monto: $" << montoReserva
+         << " | Estado: " << (estadoReserva ? "Activa" : "Cancelada") << endl;
 }
 
-Reserva::Reserva(int numeroReserva, /*Cliente* clienteAsociado ,*/ Cancha* canchaAsociada, int franjaInicial,
-        int franjaCantidadReservada, double montoReserva) {
+Reserva::Reserva(int numeroReserva,Cliente* clienteAsociado, Cancha* canchaAsociada, int franjaInicial,
+int franjaCantidadReservada, double montoReserva) {
     this->numeroReserva = numeroReserva;
-    //this->clienteAsociado = clienteAsociado //Queda pendiente 
+    this->clienteAsociado = clienteAsociado;
     this->canchaAsociada = canchaAsociada;
     this->franjaInicial = franjaInicial;
     this->franjaCantidadReservada = franjaCantidadReservada;

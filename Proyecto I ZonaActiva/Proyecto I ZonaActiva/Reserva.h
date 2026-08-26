@@ -1,12 +1,15 @@
 #pragma once
 #include <string>
 #include "Cancha.h"
+#include "Cliente.h"
+#include <iostream>
 using namespace std;
+
 
 class Reserva{
 private:
 	int numeroReserva;
-	//Cliente* clienteAsociado; //Queda en pendiente hasta hacer la clase cliente 
+	Cliente* clienteAsociado; 
 	Cancha* canchaAsociada;
 	int franjaInicial;
 	int franjaCantidadReservada;
@@ -17,7 +20,7 @@ public:
 
 	//Getters
 	int getNumeroReserva();
-	//Cliente* getCanchaCliente();//Queda pendiente
+	Cliente* getClienteAsociado();
 	Cancha* getCanchaAsociada();
 	int getFranjaInicial();
 	int getFranjaCantidadReservada();
@@ -32,11 +35,11 @@ public:
 
 	//Constructor
 	Reserva(int numeroReserva,
-		//Cliente* clienteAsociado,
-		Cancha* canchaAsociada,
-		int franjaInicial,
-		int franjaCantidadReservada,
-		double montoReserva);
+			Cliente* clienteAsociado,
+			Cancha* canchaAsociada,
+			int franjaInicial,
+			int franjaCantidadReservada,
+			double montoReserva);
 	
 	//Destructor
 	~Reserva();
