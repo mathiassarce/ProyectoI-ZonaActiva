@@ -141,12 +141,14 @@
   <ItemGroup>
     <ClCompile Include="Cancha.cpp" />
     <ClCompile Include="ListaCanchas.cpp" />
+    <ClCompile Include="ListaReserva.cpp" />
     <ClCompile Include="Proyecto I ZonaActiva.cpp" />
     <ClCompile Include="Reserva.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cancha.h" />
     <ClInclude Include="ListaCanchas.h" />
+    <ClInclude Include="ListaReserva.h" />
     <ClInclude Include="Reserva.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
